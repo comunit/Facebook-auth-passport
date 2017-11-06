@@ -41,6 +41,8 @@ app.get('/', (req, res) => {
   res.render('home', {user: req.user});
 });
 
-app.listen(3000, () => {
-  console.log('Listening to requests at 3000');
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
+  console.log(`Listening to requests at ${port}`);
 })
